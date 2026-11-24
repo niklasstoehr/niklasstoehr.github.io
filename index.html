@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Niklas Stoehr</title>
+  <meta name="description" content="Niklas Stoehr — Research Scientist at Google DeepMind in Zurich, working on Gemini post-training, mostly agentic evals. PhD in Machine Learning from ETH Zurich." />
+  <meta property="og:title" content="Niklas Stoehr" />
+  <meta property="og:description" content="Research Scientist at Google DeepMind in Zurich. PhD in Machine Learning, ETH Zurich." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://niklasstoehr.github.io/" />
+  <meta name="theme-color" content="#f3f2ee" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23d94626'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- page-specific fixed orange geometric cursor (desktop) -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <svg viewBox="-28 -28 56 56" width="52" height="52">
+      <path id="cursor-path" d="" />
+    </svg>
+  </div>
+
+  <!-- word currently stuck to the mouse cursor on Home (desktop) -->
+  <div class="sticky-word" id="sticky-word" aria-hidden="true"></div>
+
+  <!-- layer holding clicked/stamped words placed anywhere on Home -->
+  <div class="pinned-layer" id="pinned-layer" aria-hidden="true"></div>
+
+  <!-- tolook-style follow-mouse floating distorted paper figure (desktop) -->
+  <div class="pub-float-wrap" id="pub-float-wrap" aria-hidden="true">
+    <img class="pub-float-fig" id="pub-float-fig" alt="" decoding="sync" />
+  </div>
+
+  <!-- ───────── PURE TOP IDENTITY ───────── -->
+  <header class="top-bar">
+    <a href="#home" class="identity" data-page="home">Niklas Stoehr</a>
+  </header>
+
+  <!-- ───────── MAIN STAGE (ONE-VIEWPORT PAGES ON DESKTOP) ───────── -->
+  <main class="stage">
+    <!-- PAGE 1: HOME -->
+    <section class="page active" id="page-home" data-view="home" aria-label="Home">
+      <div class="home-layout">
+        <figure class="corner-photo" id="corner-photo">
+          <img src="assets/portrait.jpg" width="562" height="474" alt="Niklas Stoehr lecturing" loading="eager" decoding="sync" />
+        </figure>
+
+        <div class="home-copy">
+          <p class="bio-line">
+            Research Scientist at <span class="steal-word" data-word="Google DeepMind">Google DeepMind</span> in Zurich, working on Gemini post-training, mostly agentic evals.
+          </p>
+          <p class="bio-line">
+            PhD in Machine Learning from <span class="steal-word" data-word="ETH Zurich">ETH Zurich</span> studying Language Model interpretability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: PUBLICATIONS (DENSE ONE-PAGE INDEX + HOVER FIGURES) -->
+    <section class="page" id="page-publications" data-view="publications" aria-label="Publications" hidden>
+      <h1 class="tab-title">Publications</h1>
+      <ol class="dense-list pub-dense" id="pub-list"></ol>
+    </section>
+
+    <!-- PAGE 3: CV (ALIGNED RAW LIST + VERTICAL 90° TITLES) -->
+    <section class="page" id="page-cv" data-view="cv" aria-label="Curriculum Vitae" hidden>
+      <div class="cv-layout">
+        <div class="cv-band">
+          <h2 class="cv-vtitle">Experience</h2>
+          <ol class="cv-raw" id="cv-work"></ol>
+        </div>
+
+        <div class="cv-band">
+          <h2 class="cv-vtitle">Education</h2>
+          <ol class="cv-raw" id="cv-edu"></ol>
+        </div>
+
+        <div class="cv-band cv-band-langs">
+          <h2 class="cv-vtitle">Languages</h2>
+          <div class="cv-langs-v">German (native) / English (fluent) / Chinese (HSK 5) / French</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────── BOLD ORANGE BOTTOM BAR (HIGH-CONTRAST, NO BOX) ───────── -->
+  <nav class="bottom-bar" aria-label="Navigation and links">
+    <div class="bar-primary">
+      <a href="#cv" data-page="cv">CV</a>
+      <a href="#publications" data-page="publications">Publications</a>
+    </div>
+    <div class="bar-links">
+      <a href="https://scholar.google.com/citations?user=lYwy2iEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/niklasstoehr/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/niklasstoehr" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/niklas_stoehr" target="_blank" rel="noopener">X</a>
+      <a href="https://bsky.app/profile/niklasstoehr.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+    </div>
+  </nav>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
